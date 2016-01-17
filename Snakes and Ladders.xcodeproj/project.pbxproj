@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		897BF27B1C4C2CEB00D75391 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF27A1C4C2CEB00D75391 /* main.m */; };
+		897BF2831C4C4C3700D75391 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2821C4C4C3700D75391 /* Player.m */; };
+		897BF28C1C4C4C5000D75391 /* Space.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF28B1C4C4C5000D75391 /* Space.m */; };
+		897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF28E1C4C4C7600D75391 /* SpaceContent.m */; };
+		897BF2921C4C4D0D00D75391 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2911C4C4D0D00D75391 /* Snake.m */; };
+		897BF2951C4C4D2000D75391 /* Ladder.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2941C4C4D2000D75391 /* Ladder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		897BF2771C4C2CEB00D75391 /* Snakes and Ladders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Snakes and Ladders"; sourceTree = BUILT_PRODUCTS_DIR; };
 		897BF27A1C4C2CEB00D75391 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		897BF2811C4C4C3700D75391 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		897BF2821C4C4C3700D75391 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		897BF28A1C4C4C5000D75391 /* Space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Space.h; sourceTree = "<group>"; };
+		897BF28B1C4C4C5000D75391 /* Space.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Space.m; sourceTree = "<group>"; };
+		897BF28D1C4C4C7600D75391 /* SpaceContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceContent.h; sourceTree = "<group>"; };
+		897BF28E1C4C4C7600D75391 /* SpaceContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceContent.m; sourceTree = "<group>"; };
+		897BF2901C4C4D0D00D75391 /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
+		897BF2911C4C4D0D00D75391 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
+		897BF2931C4C4D2000D75391 /* Ladder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ladder.h; sourceTree = "<group>"; };
+		897BF2941C4C4D2000D75391 /* Ladder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ladder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +72,17 @@
 		897BF2791C4C2CEB00D75391 /* Snakes and Ladders */ = {
 			isa = PBXGroup;
 			children = (
+				897BF2931C4C4D2000D75391 /* Ladder.h */,
+				897BF2941C4C4D2000D75391 /* Ladder.m */,
 				897BF27A1C4C2CEB00D75391 /* main.m */,
+				897BF2811C4C4C3700D75391 /* Player.h */,
+				897BF2821C4C4C3700D75391 /* Player.m */,
+				897BF2901C4C4D0D00D75391 /* Snake.h */,
+				897BF2911C4C4D0D00D75391 /* Snake.m */,
+				897BF28A1C4C4C5000D75391 /* Space.h */,
+				897BF28B1C4C4C5000D75391 /* Space.m */,
+				897BF28D1C4C4C7600D75391 /* SpaceContent.h */,
+				897BF28E1C4C4C7600D75391 /* SpaceContent.m */,
 			);
 			path = "Snakes and Ladders";
 			sourceTree = "<group>";
@@ -118,6 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				897BF2921C4C4D0D00D75391 /* Snake.m in Sources */,
+				897BF2951C4C4D2000D75391 /* Ladder.m in Sources */,
+				897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */,
+				897BF28C1C4C4C5000D75391 /* Space.m in Sources */,
+				897BF2831C4C4C3700D75391 /* Player.m in Sources */,
 				897BF27B1C4C2CEB00D75391 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

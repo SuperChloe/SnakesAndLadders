@@ -13,6 +13,7 @@
 		897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF28E1C4C4C7600D75391 /* SpaceContent.m */; };
 		897BF2921C4C4D0D00D75391 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2911C4C4D0D00D75391 /* Snake.m */; };
 		897BF2951C4C4D2000D75391 /* Ladder.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2941C4C4D2000D75391 /* Ladder.m */; };
+		897BF2981C4C4D9900D75391 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2971C4C4D9900D75391 /* GameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		897BF2911C4C4D0D00D75391 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
 		897BF2931C4C4D2000D75391 /* Ladder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ladder.h; sourceTree = "<group>"; };
 		897BF2941C4C4D2000D75391 /* Ladder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ladder.m; sourceTree = "<group>"; };
+		897BF2961C4C4D9900D75391 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		897BF2971C4C4D9900D75391 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				897BF28B1C4C4C5000D75391 /* Space.m */,
 				897BF28D1C4C4C7600D75391 /* SpaceContent.h */,
 				897BF28E1C4C4C7600D75391 /* SpaceContent.m */,
+				897BF2961C4C4D9900D75391 /* GameController.h */,
+				897BF2971C4C4D9900D75391 /* GameController.m */,
 			);
 			path = "Snakes and Ladders";
 			sourceTree = "<group>";
@@ -147,6 +152,7 @@
 				897BF2951C4C4D2000D75391 /* Ladder.m in Sources */,
 				897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */,
 				897BF28C1C4C4C5000D75391 /* Space.m in Sources */,
+				897BF2981C4C4D9900D75391 /* GameController.m in Sources */,
 				897BF2831C4C4C3700D75391 /* Player.m in Sources */,
 				897BF27B1C4C2CEB00D75391 /* main.m in Sources */,
 			);

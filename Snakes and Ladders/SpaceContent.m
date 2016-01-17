@@ -10,4 +10,8 @@
 
 @implementation SpaceContent
 
+- (void)movePlayer {
+    
+}
+
 @end

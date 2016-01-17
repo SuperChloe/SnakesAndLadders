@@ -10,4 +10,6 @@
 
 @interface SpaceContent : NSObject
 
+- (void)movePlayer;
+
 @end

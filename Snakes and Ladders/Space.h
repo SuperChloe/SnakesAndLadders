@@ -10,4 +10,8 @@
 
 @interface Space : NSObject
 
+@property (nonatomic, strong) Space *nextSpace;
+@property (nonatomic, strong) Space *previousSpace;
+
+
 @end

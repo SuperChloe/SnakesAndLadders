@@ -16,7 +16,6 @@ typedef NS_ENUM(NSInteger, Difficulty) {
     Hard
 };
 
-
 @interface GameController : NSObject
 
 @property (nonatomic, assign) int boardSize;
@@ -32,6 +31,5 @@ typedef NS_ENUM(NSInteger, Difficulty) {
 - (void)printLocation;
 - (Space *)generateBoard;
 - (SpaceContent *)randomContent:(Difficulty)difficulty spaceNumber:(int)number;
-- (void)userGameSetup;
 
 @end

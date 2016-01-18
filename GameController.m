@@ -7,6 +7,7 @@
 //
 
 // TODO: If you happen to get a snake generated on the last space, you can never win the game lol. But it happens rarely, so will fix if I have time.
+// TODO: randomContent:spaceNumber: needs DRY
 
 #import "GameController.h"
 #import "InputCollector.h"
@@ -28,7 +29,6 @@
         _player2.playerName = @"Player 2";
         _player1.currentSpace = _start;
         _player2.currentSpace = _start;
-        
     }
     return self;
 }

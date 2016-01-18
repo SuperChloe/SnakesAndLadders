@@ -17,7 +17,7 @@
         NSLog(@"%d", player.currentSpace.spaceNumber);
         player.currentSpace = player.currentSpace.previousSpace;
     }
-    NSLog(@"Sssssssnakin' on down %d spaces!", self.length);
+    NSLog(@"SsSsSsSnakin' on down %d spaces!", self.length);
 }
 
 @end

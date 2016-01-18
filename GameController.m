@@ -6,6 +6,8 @@
 //  Copyright © 2016 Chloe Horgan. All rights reserved.
 //
 
+// TODO: If you happen to get a snake generated on the last space, you can never win the game lol. But it happens rarely, so will fix if I have time.
+
 #import "GameController.h"
 #import "InputCollector.h"
 #import "SpaceContent.h"
@@ -41,13 +43,18 @@
         [self userInput:self.player2];
         [self printLocation];
     }
+    if (self.player1.currentSpace.spaceNumber == self.boardSize) {
+        NSLog(@" Player 1 Wins!!!!! Game Over!");
+    } else if (self.player2.currentSpace.spaceNumber == self.boardSize) {
+        NSLog(@"Player 2 Wins!!!!! Game Over!");
+    }
 }
 
 - (void)userInput:(Player *)player {
     int diceRoll;
     InputCollector *inputCollector = [[InputCollector alloc] init];
     NSLog(@"%@", player.playerName);
-    NSString *roll =[inputCollector inputForPrompt:@"Input your roll:"];
+    NSString *roll = [inputCollector inputForPrompt:@"Input your roll:"];
     if ([roll isEqualToString:@"1"]) {
         diceRoll = 1;
     } else if ([roll isEqualToString:@"2"]) {
@@ -71,7 +78,9 @@
 - (void)movePlayer:(Player *)player withRoll:(int)diceRoll {
     for (int i = 0; i < diceRoll; i++) {
         NSLog(@"%d", player.currentSpace.spaceNumber);
-        player.currentSpace = player.currentSpace.nextSpace;
+        if (player.currentSpace.nextSpace) {
+            player.currentSpace = player.currentSpace.nextSpace;
+        }
     }
     if (player.currentSpace.content) {
         [player.currentSpace.content movePlayer:player];
@@ -155,5 +164,7 @@
     }
     return nil;
 }
+
+
 
 @end

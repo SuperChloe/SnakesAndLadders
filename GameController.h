@@ -32,5 +32,6 @@ typedef NS_ENUM(NSInteger, Difficulty) {
 - (void)printLocation;
 - (Space *)generateBoard;
 - (SpaceContent *)randomContent:(Difficulty)difficulty spaceNumber:(int)number;
+- (void)userGameSetup;
 
 @end

@@ -11,7 +11,7 @@
 
 @interface Player : NSObject
 
-@property (nonatomic, strong) Space *currentSpace;
+@property (nonatomic) Space *currentSpace;
 @property (nonatomic, strong) NSString *playerName;
 
 @end

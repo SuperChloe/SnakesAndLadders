@@ -62,12 +62,18 @@
     } else {
         NSLog(@"That is not a valid roll");
     }
-    [self movePlayer:player withRoll:diceRoll];
+    if (diceRoll) {
+        [self movePlayer:player withRoll:diceRoll];
+    }
 }
 
 - (void)movePlayer:(Player *)player withRoll:(int)diceRoll {
     for (int i = 0; i < diceRoll; i++) {
-    player.currentSpace = player.currentSpace.nextSpace;
+        NSLog(@"%d", player.currentSpace.spaceNumber);
+        player.currentSpace = player.currentSpace.nextSpace;
+    }
+    if (player.currentSpace.content) {
+        [player.currentSpace.content movePlayer:player];
     }
 }
 
@@ -78,30 +84,39 @@
 
 - (Space *)generateBoard {
     Space *home = [[Space alloc] initWithContent:nil];
+    home.spaceNumber = 1;
     Space *spaceCursor = home;
     Space *previousSpace;
     
-    for (int i = 0; i < self.boardSize; i++) {
+    for (int i = 1; i < self.boardSize; i++) {
         
-        SpaceContent *randContent = [self randomContent:self.difficulty];
+        SpaceContent *randContent = [self randomContent:self.difficulty spaceNumber:i + 1];
         
         spaceCursor.nextSpace = [[Space alloc] initWithContent:randContent];
-        spaceCursor.spaceNumber = i + 1;
+        spaceCursor.nextSpace.spaceNumber = i + 1;
         previousSpace = spaceCursor;
         spaceCursor = spaceCursor.nextSpace;
+        spaceCursor.previousSpace = previousSpace;
     }
     return home;
 }
 
-- (SpaceContent *)randomContent:(Difficulty)difficulty {
+- (SpaceContent *)randomContent:(Difficulty)difficulty spaceNumber:(int)number {
     int random = arc4random_uniform(100);
     if (difficulty == Easy) {
         // 5/60/35
-        if (random < 5) {
+        if (random < 50) {
             Snake *snake = [[Snake alloc] init];
+            if (snake.length > number - 1) {
+                snake.length = number - 1;
+            }
             return snake;
         } else if (random >= 65) {
             Ladder *ladder = [[Ladder alloc] init];
+            int distanceFromEnd = self.boardSize - number;
+            if (ladder.length > distanceFromEnd) {
+                ladder.length = distanceFromEnd;
+            }
             return ladder;
         }
     } else if (difficulty == Medium) {

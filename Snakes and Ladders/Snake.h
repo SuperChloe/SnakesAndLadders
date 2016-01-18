@@ -10,5 +10,4 @@
 
 @interface Snake : SpaceContent
 
-
 @end

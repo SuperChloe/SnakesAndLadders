@@ -15,6 +15,7 @@
     for (int i = 0; i < self.length; i++) {
         player.currentSpace = player.currentSpace.nextSpace;
     }
+    NSLog(@"LADDER TIME Movin' on up %d spaces!", self.length);
 }
 
 @end

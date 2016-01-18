@@ -11,7 +11,7 @@
 
 @interface SpaceContent : NSObject
 
-@property (nonatomic) int length;
+@property (nonatomic, assign) int length;
 
 - (void)movePlayer:(Player *)player;
 

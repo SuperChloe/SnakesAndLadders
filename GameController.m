@@ -34,7 +34,8 @@
 
 - (void)startGame {
     NSLog(@"Reach space %d to win", self.boardSize);
-    while (YES) {
+    
+    while (self.player1.currentSpace.spaceNumber != self.boardSize && self.player2.currentSpace.spaceNumber != self.boardSize) {
         [self userInput:self.player1];
         [self printLocation];
         [self userInput:self.player2];
@@ -105,7 +106,7 @@
     int random = arc4random_uniform(100);
     if (difficulty == Easy) {
         // 5/60/35
-        if (random < 50) {
+        if (random < 5) {
             Snake *snake = [[Snake alloc] init];
             if (snake.length > number - 1) {
                 snake.length = number - 1;
@@ -121,10 +122,36 @@
         }
     } else if (difficulty == Medium) {
         // 20/60/20
-        
+        if (random < 20) {
+            Snake *snake = [[Snake alloc] init];
+            if (snake.length > number - 1) {
+                snake.length = number - 1;
+            }
+            return snake;
+        } else if (random >= 80) {
+            Ladder *ladder = [[Ladder alloc] init];
+            int distanceFromEnd = self.boardSize - number;
+            if (ladder.length > distanceFromEnd) {
+                ladder.length = distanceFromEnd;
+            }
+            return ladder;
+        }
     } else if (difficulty == Hard) {
         // 35/60/5
-        
+        if (random < 35) {
+            Snake *snake = [[Snake alloc] init];
+            if (snake.length > number - 1) {
+                snake.length = number - 1;
+            }
+            return snake;
+        } else if (random >= 95) {
+            Ladder *ladder = [[Ladder alloc] init];
+            int distanceFromEnd = self.boardSize - number;
+            if (ladder.length > distanceFromEnd) {
+                ladder.length = distanceFromEnd;
+            }
+            return ladder;
+        }
     }
     return nil;
 }

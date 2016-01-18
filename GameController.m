@@ -9,6 +9,8 @@
 #import "GameController.h"
 #import "InputCollector.h"
 #import "SpaceContent.h"
+#import "Snake.h"
+#import "Ladder.h"
 
 @implementation GameController
 
@@ -95,10 +97,19 @@
     int random = arc4random_uniform(100);
     if (difficulty == Easy) {
         // 5/60/35
+        if (random < 5) {
+            Snake *snake = [[Snake alloc] init];
+            return snake;
+        } else if (random >= 65) {
+            Ladder *ladder = [[Ladder alloc] init];
+            return ladder;
+        }
     } else if (difficulty == Medium) {
         // 20/60/20
+        
     } else if (difficulty == Hard) {
         // 35/60/5
+        
     }
     return nil;
 }

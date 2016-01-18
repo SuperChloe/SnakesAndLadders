@@ -13,8 +13,8 @@
 		897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF28E1C4C4C7600D75391 /* SpaceContent.m */; };
 		897BF2921C4C4D0D00D75391 /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2911C4C4D0D00D75391 /* Snake.m */; };
 		897BF2951C4C4D2000D75391 /* Ladder.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2941C4C4D2000D75391 /* Ladder.m */; };
-		897BF29B1C4C4DC100D75391 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF29A1C4C4DC100D75391 /* GameController.m */; };
 		897BF29E1C4C4E5400D75391 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF29D1C4C4E5400D75391 /* InputCollector.m */; };
+		897BF2A11C4C958800D75391 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BF2A01C4C958800D75391 /* GameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,10 +42,10 @@
 		897BF2911C4C4D0D00D75391 /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
 		897BF2931C4C4D2000D75391 /* Ladder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ladder.h; sourceTree = "<group>"; };
 		897BF2941C4C4D2000D75391 /* Ladder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ladder.m; sourceTree = "<group>"; };
-		897BF2991C4C4DC100D75391 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameController.h; path = ../GameController.h; sourceTree = "<group>"; };
-		897BF29A1C4C4DC100D75391 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameController.m; path = ../GameController.m; sourceTree = "<group>"; };
 		897BF29C1C4C4E5400D75391 /* InputCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputCollector.h; sourceTree = "<group>"; };
 		897BF29D1C4C4E5400D75391 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
+		897BF29F1C4C958800D75391 /* GameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		897BF2A01C4C958800D75391 /* GameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +78,8 @@
 		897BF2791C4C2CEB00D75391 /* Snakes and Ladders */ = {
 			isa = PBXGroup;
 			children = (
-				897BF2991C4C4DC100D75391 /* GameController.h */,
-				897BF29A1C4C4DC100D75391 /* GameController.m */,
+				897BF29F1C4C958800D75391 /* GameController.h */,
+				897BF2A01C4C958800D75391 /* GameController.m */,
 				897BF2931C4C4D2000D75391 /* Ladder.h */,
 				897BF2941C4C4D2000D75391 /* Ladder.m */,
 				897BF27A1C4C2CEB00D75391 /* main.m */,
@@ -158,7 +158,7 @@
 				897BF29E1C4C4E5400D75391 /* InputCollector.m in Sources */,
 				897BF28F1C4C4C7600D75391 /* SpaceContent.m in Sources */,
 				897BF28C1C4C4C5000D75391 /* Space.m in Sources */,
-				897BF29B1C4C4DC100D75391 /* GameController.m in Sources */,
+				897BF2A11C4C958800D75391 /* GameController.m in Sources */,
 				897BF2831C4C4C3700D75391 /* Player.m in Sources */,
 				897BF27B1C4C2CEB00D75391 /* main.m in Sources */,
 			);

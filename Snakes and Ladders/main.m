@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        GameController *newGame = [[GameController alloc] initWithBoardSize:5 andDifficulty:Easy];
+        
+        [newGame startGame];
+        
     }
     return 0;
 }

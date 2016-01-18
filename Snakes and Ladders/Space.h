@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SpaceContent.h"
 
 @interface Space : NSObject
 
 @property (nonatomic, strong) Space *nextSpace;
 @property (nonatomic, strong) Space *previousSpace;
+@property (nonatomic, strong) SpaceContent *content;
+
+- (instancetype)initWithContent:(SpaceContent *)content;
 
 
 @end

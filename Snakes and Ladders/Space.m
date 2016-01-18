@@ -10,4 +10,12 @@
 
 @implementation Space
 
+- (instancetype)initWithContent:(SpaceContent *)content {
+    self = [super init];
+    if (self) {
+        _content = content;
+    }
+    return self;
+}
+
 @end

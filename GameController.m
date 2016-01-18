@@ -8,6 +8,7 @@
 
 #import "GameController.h"
 #import "InputCollector.h"
+#import "SpaceContent.h"
 
 @implementation GameController
 
@@ -54,18 +55,25 @@
 }
 
 - (Space *)generateBoard {
-    Space *home = [[Space alloc] init];
+    Space *home = [[Space alloc] initWithContent:nil];
     Space *spaceCursor = home;
     Space *previousSpace;
     
     for (int i = 0; i < self.boardSize; i++) {
         
-        spaceCursor.nextSpace = [[Space alloc] init];
+        SpaceContent *randomContent = [self randomContent];
+        
+        spaceCursor.nextSpace = [[Space alloc] initWithContent:randomContent];
         previousSpace = spaceCursor;
         spaceCursor = spaceCursor.nextSpace;
         
     }
+    
     return home;
+}
+
+- (SpaceContent *)randomContent {
+    return nil;
 }
 
 @end

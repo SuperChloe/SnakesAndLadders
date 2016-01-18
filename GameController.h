@@ -27,7 +27,9 @@ typedef NS_ENUM(NSInteger, Difficulty) {
 
 - (instancetype)initWithBoardSize:(int)boardSize andDifficulty:(Difficulty)difficulty;
 - (void)startGame;
-- (void)userInput;
+- (void)userInput:(Player *)player;
+- (void)movePlayer:(Player *)player withRoll:(int)diceRoll;
+- (void)printLocation;
 - (Space *)generateBoard;
 - (SpaceContent *)randomContent;
 

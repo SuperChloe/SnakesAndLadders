@@ -14,6 +14,7 @@
 @property (nonatomic, strong) Space *nextSpace;
 @property (nonatomic, strong) Space *previousSpace;
 @property (nonatomic, strong) SpaceContent *content;
+@property (nonatomic, assign) int spaceNumber;
 
 - (instancetype)initWithContent:(SpaceContent *)content;
 

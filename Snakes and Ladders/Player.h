@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Space.h"
 
 @interface Player : NSObject
 
-@property (nonatomic, assign) int diceRoll;
+@property (nonatomic, strong) Space *currentSpace;
+@property (nonatomic, strong) NSString *playerName;
 
 @end

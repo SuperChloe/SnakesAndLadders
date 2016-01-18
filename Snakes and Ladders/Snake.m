@@ -10,6 +10,11 @@
 
 @implementation Snake
 
-
+- (void)movePlayer:(Player *)player {
+    // Move back x spaces
+    for (int i = 0; i < self.length; i++) {
+        player.currentSpace = player.currentSpace.previousSpace;
+    }
+}
 
 @end

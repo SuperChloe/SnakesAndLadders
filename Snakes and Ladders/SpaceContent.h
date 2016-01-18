@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
 
 @interface SpaceContent : NSObject
 
-- (void)movePlayer;
+@property (nonatomic) int length;
+
+- (void)movePlayer:(Player *)player;
 
 @end

@@ -81,20 +81,25 @@
     
     for (int i = 0; i < self.boardSize; i++) {
         
-        SpaceContent *randomContent = [self randomContent];
+        SpaceContent *randContent = [self randomContent:self.difficulty];
         
-        spaceCursor.nextSpace = [[Space alloc] initWithContent:randomContent];
+        spaceCursor.nextSpace = [[Space alloc] initWithContent:randContent];
         spaceCursor.spaceNumber = i + 1;
         previousSpace = spaceCursor;
         spaceCursor = spaceCursor.nextSpace;
-        
-        
     }
-    
     return home;
 }
 
-- (SpaceContent *)randomContent {
+- (SpaceContent *)randomContent:(Difficulty)difficulty {
+    int random = arc4random_uniform(100);
+    if (difficulty == Easy) {
+        // 5/60/35
+    } else if (difficulty == Medium) {
+        // 20/60/20
+    } else if (difficulty == Hard) {
+        // 35/60/5
+    }
     return nil;
 }
 

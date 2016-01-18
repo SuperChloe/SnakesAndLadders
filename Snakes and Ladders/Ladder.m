@@ -10,4 +10,11 @@
 
 @implementation Ladder
 
+- (void)movePlayer:(Player *)player {
+    // Move forward x spaces
+    for (int i = 0; i < self.length; i++) {
+        player.currentSpace = player.currentSpace.nextSpace;
+    }
+}
+
 @end

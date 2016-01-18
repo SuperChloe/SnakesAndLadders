@@ -13,7 +13,7 @@
 typedef NS_ENUM(NSInteger, Difficulty) {
     Easy,
     Medium,
-    Difficult
+    Hard
 };
 
 
@@ -31,6 +31,6 @@ typedef NS_ENUM(NSInteger, Difficulty) {
 - (void)movePlayer:(Player *)player withRoll:(int)diceRoll;
 - (void)printLocation;
 - (Space *)generateBoard;
-- (SpaceContent *)randomContent;
+- (SpaceContent *)randomContent:(Difficulty)difficulty;
 
 @end

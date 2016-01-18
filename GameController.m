@@ -51,33 +51,36 @@
 }
 
 - (void)userInput:(Player *)player {
-    int diceRoll;
     InputCollector *inputCollector = [[InputCollector alloc] init];
-    NSLog(@"%@", player.playerName);
-    NSString *roll = [inputCollector inputForPrompt:@"Input your roll:"];
-    if ([roll isEqualToString:@"1"]) {
-        diceRoll = 1;
-    } else if ([roll isEqualToString:@"2"]) {
-        diceRoll = 2;
-    } else if ([roll isEqualToString:@"3"]) {
-        diceRoll = 3;
-    } else if ([roll isEqualToString:@"4"]) {
-        diceRoll = 4;
-    } else if ([roll isEqualToString:@"5"]) {
-        diceRoll = 5;
-    } else if ([roll isEqualToString:@"6"]) {
-        diceRoll = 6;
-    } else {
-        NSLog(@"That is not a valid roll");
-    }
-    if (diceRoll) {
-        [self movePlayer:player withRoll:diceRoll];
+    while (YES) {
+        NSLog(@"%@", player.playerName);
+        NSString *roll = [inputCollector inputForPrompt:@"Input your roll:"];
+   
+        int diceRoll;
+        if ([roll isEqualToString:@"1"]) {
+            diceRoll = 1;
+        } else if ([roll isEqualToString:@"2"]) {
+            diceRoll = 2;
+        } else if ([roll isEqualToString:@"3"]) {
+            diceRoll = 3;
+        } else if ([roll isEqualToString:@"4"]) {
+            diceRoll = 4;
+        } else if ([roll isEqualToString:@"5"]) {
+            diceRoll = 5;
+        } else if ([roll isEqualToString:@"6"]) {
+            diceRoll = 6;
+        } else {
+            NSLog(@"That is not a valid roll");
+        }
+        if (diceRoll) {
+            [self movePlayer:player withRoll:diceRoll];
+            break;
+        }
     }
 }
 
 - (void)movePlayer:(Player *)player withRoll:(int)diceRoll {
     for (int i = 0; i < diceRoll; i++) {
-        NSLog(@"%d", player.currentSpace.spaceNumber);
         if (player.currentSpace.nextSpace) {
             player.currentSpace = player.currentSpace.nextSpace;
         }
